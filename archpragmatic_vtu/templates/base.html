@@ -1,0 +1,332 @@
+{% load static i18n %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>
+      {% block title %}
+      Archpragmatic_vtu
+    {% endblock title %}
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+        content="vtu project" />
+  <meta name="author"
+        content="Archpragmatic" />
+  
+  {% block css %}
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link rel="stylesheet" href="{% static 'css/project.css' %}">
+{% endblock css %}
+<!-- Le javascript
+    ================================================== -->
+    
+{# Placed at the top of the document so pages load faster with defer #}
+{% block javascript %}
+
+
+<!-- Bootstrap JS -->
+<script defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
+        integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{% static 'js/vendor/jquery-2.2.4.min.js' %}"><\/script>')</script>
+        <script src="{% static 'js/functions-min2.js' %}"></script>
+        <!-- <script defer src="{% static 'js/functions.js' %}"></script> -->
+        <script src="{% static 'js/vendor/hammer-2.0.8.js' %}"></script>
+  
+
+{% endblock javascript %}
+</head>
+<body>
+  <div class="device-notification">
+    <a class="device-notification--logo" href="#0">
+      <img src="{% static 'img/logo.png' %}" alt="Archpragmatic_vtu">
+      <p>Archpragmatic_vtu</p>
+    </a>
+    <p class="device-notification--message">Archpragmatic_vtu has so much to offer that we must request you orient your device to portrait or find a larger screen. You won't be disappointed.</p>
+  </div>
+  
+  <div class="perspective effect-rotate-left">
+    <div class="container"><div class="outer-nav--return"></div>
+      <div id="viewport" class="l-viewport">
+        <div class="l-wrapper">
+          <header class="header">
+            <a class="header--logo" href="#0">
+              <img src="{% static 'img/logo.png' %}" alt="Archpragmatic_vtu">
+              <p>Archpragmatic_vtu</p>
+            </a>
+            <button class="header--cta cta">Hire</button>
+            <div class="header--nav-toggle">
+              <span></span>
+            </div>
+          </header>
+          <nav class="l-side-nav">
+            <ul class="side-nav">
+              <li class="is-active"><span>Home</span></li>
+              <li><span>Works</span></li>
+              <li><span>Certifications</span></li>
+              <li><span>Contact</span></li>
+              <li><span>Hire</span></li>
+              <!-- <li><span>Login/Logout</span></li> -->
+            </ul>
+          </nav>
+          <ul class="l-main-content main-content">
+            <!-- Home -->
+            <li class="l-section section section--is-active">
+              <div class="intro">
+                <div class="intro--banner">
+                  <p>Abdulsalam Abubakar Salman</p>
+                  <div style="margin-right: 500px;">
+                    <p style="text-align: center;">My passion for technology led me to pursue a Computer Science degree at
+                      Abubakar Tafawa Balewa University, Bauchi. Python quickly became my go-to
+                      language, and I've been fascinated by the potential of Artificial Intelligence ever
+                      since.
+                      Right now, I'm actively building my skills and experience. I freelance on various
+                      projects, mentor aspiring programmers, and contribute my expertise as a part-
+                      time API developer. However, I'm also looking for a more stable opportunity that
+                      allows me to work remotely or in a hybrid environment.</p>
+                  </div>
+                  <button class="cta">Hire 
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                    </g>
+                    </svg>
+                    <span class="btn-background"></span>
+                  </button>
+                  <img src="{% static 'img/me2.png' %}" style="width: 500px; height: 450px;" alt="Welcome">
+                </div>
+                
+              </div>
+            </li>
+
+            <!-- End home -->
+            <!-- Service-->
+            <li class="l-section section">
+              <div class="work">
+                <h2>Services</h2>
+                <div class="work--lockup">
+                  <ul class="slider">
+                    <li class="slider--item slider--item-left">
+                      <a href="#0">
+                        <div class="slider--item-image">
+                          <img src="{% static 'img/website.png' %}" alt="website">
+                        </div>
+                        <p class="slider--item-title">Website</p>
+                        <!-- <p class="slider--item-description">Perfunctory introduction.</p> -->
+                      </a>
+                    </li>
+                    <li class="slider--item slider--item-center">
+                      <a href="#0">
+                        <div class="slider--item-image">
+                          <img src="{% static 'img/webapp.jpeg' %}" alt="webapp">
+                        </div>
+                        <p class="slider--item-title">Web Application</p>
+                        <!-- <p class="slider--item-description">Perfunctory introduction.</p> -->
+                      </a>
+                    </li>
+                    <li class="slider--item slider--item-right">
+                      <a href="#0">
+                        <div class="slider--item-image">
+                          <img src="{% static 'img/pwa.jpeg' %}" alt="pwa">
+                        </div>
+                        <p class="slider--item-title">PWA</p>
+                        <!-- <p class="slider--item-description">Progressive Web Application.</p> -->
+                      </a>
+                    </li>
+                    <li class="slider--item">
+                      <a href="#0">
+                        <div class="slider--item-image">
+                          <img src="{% static 'img/api.jpeg' %}" alt="api">
+                        </div>
+                        <p class="slider--item-title">API</p>
+                        <!-- <p class="slider--item-description">Application Programming Interface.</p> -->
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="slider--prev">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                      <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
+                      c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
+                      c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"/>
+                    </g>
+                    </svg>
+                  </div>
+                  <div class="slider--next">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                    </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- end work -->
+            <!-- About -->
+            <li class="l-section section">
+              <div class="about">
+                <div class="about--banner">
+                  <h2>Certifications</h2>
+                </div>
+                <div class="slider-container">
+                  <div class="slider-wrapper">
+                      <img style="height: 100px;" src="{% static 'img/azure-ai-fundamentals-600x600.png' %}" alt="Slide 1 Image">
+                      <img style="height: 100px;" src="{% static 'img/Hack4SDGs.png' %}" alt="Slide 2 Image">
+                      <img style="height: 100px;" src="{% static 'img/NaijaNorth.png' %}" alt="Slide 3 Image">
+                      <img style="height: 100px;" src="{% static 'img/cert1.png' %}" alt="Slide 3 Image">
+                      <img style="height: 100px;" src="{% static 'img/cert2.png' %}" alt="Slide 3 Image">
+                      <img style="height: 100px;" src="{% static 'img/cert3.png' %}" alt="Slide 3 Image">
+                      <!-- <img style="height: 100px;" src="{% static 'img/cert4.png' %}" alt="Slide 3 Image"> -->
+                  </div>
+                  <div class="slider-dots">
+                      <span class="dot active"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                  </div>
+              </div>
+              </div>
+            </li>
+            <li class="l-section section">
+              <div class="contact">
+                <div class="contact--lockup">
+                  <div class="modal">
+                    <div class="modal--information">
+                      <p>Jos, plateau state. Nigeria</p>
+                      <a href="mailto:ouremail@gmail.com">abdulsalamabubakar52@gmail.com</a>
+                      <a href="tel:+234 9138799848">+234 9138799848</a>
+                    </div>
+                    <ul class="modal--options">
+                      <li><a href="https://www.linkedin.com/in/abdulsalma/">Linkedin</a></li>
+                      <!-- <li><a href="#0">dribbble</a></li> -->
+                      <!-- <li><a href="mailto:ouremail@gmail.com">Contact Us</a></li> -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="l-section section">
+              <div class="hire">
+                <h2>You want us to do</h2>
+                <!-- checkout formspree.io for easy form setup -->
+                <form class="work-request" method="post" action="{% url 'work_request' %}">
+                  <div class="work-request--options">
+                    <span class="options-a">
+                      <input id="opt-1" type="checkbox" value="app design">
+                      <label for="opt-1">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                        <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                          <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                        </g>
+                        </svg>
+                        App Design
+                      </label>
+                      <input id="opt-2" type="checkbox" value="graphic design">
+                      <label for="opt-2">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                        <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                          <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                        </g>
+                        </svg>
+                        Graphic Design
+                      </label>
+                      <input id="opt-3" type="checkbox" value="motion design">
+                      <label for="opt-3">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                        <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                          <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                        </g>
+                        </svg>
+                        Motion Design
+                      </label>
+                    </span>
+                    <span class="options-b">
+                      <input id="opt-4" type="checkbox" value="ux design">
+                      <label for="opt-4">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                        <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                          <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                        </g>
+                        </svg>
+                        UX Design
+                      </label>
+                      <input id="opt-5" type="checkbox" value="webdesign">
+                      <label for="opt-5">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                        <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                          <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                        </g>
+                        </svg>
+                        Webdesign
+                      </label>
+                      <input id="opt-6" type="checkbox" value="marketing">
+                      <label for="opt-6">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                        <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                          <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                        </g>
+                        </svg>
+                        Marketing
+                      </label>
+                    </span>
+                  </div>
+                  <div class="work-request--information">
+                    <div class="information-name">
+                      <input id="name" type="text" spellcheck="false">
+                      <label for="name">Name</label>
+                    </div>
+                    <div class="information-email">
+                      <input id="email" type="email" spellcheck="false">
+                      <label for="email">Email</label>
+                    </div>
+                  </div>
+                  <input type="submit" value="Send Request">
+                </form>
+              </div>
+            </li>
+            <li class="l-section section">
+              <div class="box">
+                {% if request.user.is_authenticated %}
+                {% include "account/logout.html" %}
+                {% else %}
+                {% include "account/login.html" %}
+              {% endif %}
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul class="outer-nav">
+      <li class="is-active">Home</li>
+      <li>Works</li>
+      <li>About</li>
+      <li>Contact</li>
+      <li>Hire</li>
+      <li>Login/Logout</li>
+    </ul>
+  </div>
+  
+
+  {% block modal %}
+  {% endblock modal %}
+  {% block inline_javascript %}
+    
+  {% endblock inline_javascript %}
+</body>
+</html>

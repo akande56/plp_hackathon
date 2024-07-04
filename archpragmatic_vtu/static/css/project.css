@@ -1,0 +1,17 @@
+.box {
+    position: relative;
+    display: flex;
+    width: 700px;
+    max-width: 75%;
+    height: 50%;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.box h2 {
+    margin: 0 0 20px 0;
+    font-size: 30px;
+    text-align: center;
+}
+
